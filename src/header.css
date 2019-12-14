@@ -1,0 +1,39 @@
+header {
+  width: 100%;
+  background-color: #eee;
+}
+header .inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 66px;
+  padding: 8px 8px 8px 66px;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+}
+.logo a {
+  text-decoration: none;
+}
+.logo h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.header_contacts a {
+  display: inline-block;
+  border-bottom: 1px dashed #777;
+  color: #333;
+  text-decoration: none;
+}
+@media screen and (min-width: 440px) {
+}
+@media screen and (min-width: 1200px) {
+  header .inner {
+    margin: 0;
+    padding: 8px 8px 8px 32px;
+  }
+}

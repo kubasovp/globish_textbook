@@ -1,0 +1,78 @@
+nav {
+  order: -1;
+}
+.btn_show {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  transition: left 0.1s ease-in-out;
+}
+.btn_show_active {
+  left: 308px;
+}
+.btn_show img {
+  pointer-events: none;
+}
+nav {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #eee;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: left 0.1s ease-in-out;
+}
+.nav {
+  margin: 0;
+  padding: 0 0 0 8px;
+  list-style-type: none;
+  counter-reset: a;
+}
+.annex {
+  counter-reset: b;
+}
+.nav_show {
+  left: 0;
+  z-index: 1;
+}
+.nav_input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.nav a {
+  display: block;
+  padding: 4px 0;
+  font-size: 18px;
+  text-decoration: none;
+}
+.nav a::before {
+  counter-increment: a;
+  content: counter(a) ".";
+  padding-right: 8px;
+  color: #333;
+}
+.annex a::before {
+  counter-increment: b;
+  content: counter(b) ".";
+}
+@media screen and (min-width: 1200px) {
+  .btn_show {
+    display: none;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .nav {
+    position: relative;
+    left: 0;
+  }
+}

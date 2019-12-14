@@ -1,0 +1,99 @@
+.textbook {
+  padding: 0 8px;
+}
+
+.tb_max {
+  width: 100%;
+}
+.tb_3equal td {
+  width: calc(100% / 3);
+}
+.tb_2equal td {
+  width: 50%;
+}
+.tb_header {
+  background-color: #ddd;
+}
+.tb_lines td {
+  padding: 4px 0;
+  border-bottom: 1px solid #ddd;
+}
+.tb_subheader td {
+  padding-right: 8px;
+}
+td.tb_subtitle {
+  padding: 8px 0;
+  background-color: #61a2ff;
+  border-bottom: 0px solid #ddd;
+}
+td span {
+  color: #777;
+}
+.lesson img {
+  max-width: 100%;
+}
+
+.essential {
+  padding-left: 32px;
+  background-image: url("src/img/attention.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 24px;
+  line-height: 24px;
+}
+.emphasis {
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+.homework li {
+  margin-bottom: 8px;
+}
+
+.subnav {
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px 0;
+  border-top: 1px solid #777;
+}
+.subnav ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.subnav li:last-child {
+  text-align: right;
+}
+
+@media screen and (min-width: 720px) {
+  .textbook {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .lesson,
+  .homework {
+    width: calc(50% - 16px);
+    padding-top: 32px;
+  }
+  .lesson_table {
+    width: 100%;
+  }
+  .lesson h1,
+  .homework h2 {
+    margin-top: 0;
+    line-height: 1;
+  }
+  .homework h2 {
+    padding-top: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .textbook {
+    padding: 0 32px;
+  }
+}
